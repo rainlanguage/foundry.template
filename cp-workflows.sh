@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
 mkdir -p ./.github/workflows
-cp -f ./lib/qakit.foundry/.github/workflows/qakit-slither.yaml ./.github/workflows/qakit-slither.yaml
-cp -f ./lib/qakit.foundry/.github/workflows/qakit-test.yaml ./.github/workflows/qakit-test.yaml
+for f in docs slither test
+do
+  cp -f "./lib/qakit.foundry/.github/workflows/qakit-$f.yaml" "./.github/workflows/qakit-$f.yaml"
+done
