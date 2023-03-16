@@ -1,5 +1,6 @@
 #!/usr/bin/env sh
 
-mkdir -p .github/workflows/qakit.foundry
-rm ./lib/qakit.foundry/.github/workflows
-ln -s ./lib/qakit.foundry/.github/workflows .github/workflows/qakit.foundry .
+dir=".github/workflows/qakit.foundry"
+mkdir -p "$dir"
+rm "$dir"
+ln -sr ./lib/qakit.foundry/.github/workflows "../../../$dir"
