@@ -3,7 +3,11 @@ Cross cutting QA concerns for foundry based solidity development
 
 ## Install
 
-`forge install rainprotocol/qakit.foundry foundry-rs/forge-std`
+```
+forge install rainprotocol/qakit.foundry foundry-rs/forge-std
+```
+
+Run `sync.sh`
 
 ## Update
 
