@@ -7,4 +7,4 @@ Cross cutting QA concerns for foundry based solidity development
 
 ## Update
 
-`forge upgrade rainprotocol/qakit.foundry`
+`forge update lib/qakit.foundry`
