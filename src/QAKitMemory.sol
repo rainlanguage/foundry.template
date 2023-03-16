@@ -1,7 +1,11 @@
 // SPDX-License-Identifier: CAL
 pragma solidity ^0.8.15;
 
+import "sol.lib.bytes/LibBytes.sol";
+
 library QAKitMemory {
+    using LibBytes for bytes;
+
     function assertMemoryAlignment() internal {
         // Check alignment of memory after allocation.
         uint256 memPtr_;
