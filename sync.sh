@@ -1,3 +1,3 @@
 #!/usr/bin/env sh
 
-./link-workflows.sh
+./cp-workflows.sh
