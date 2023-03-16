@@ -4,7 +4,7 @@ pragma solidity ^0.8.15;
 import "forge-std/Test.sol";
 import "sol.lib.bytes/LibBytes.sol";
 
-contract QAKitMemory is Test {
+contract QAKitMemoryTest is Test {
     using LibBytes for bytes;
 
     function assertMemoryAlignment() internal {
