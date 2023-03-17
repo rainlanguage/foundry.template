@@ -27,6 +27,7 @@ library LibQAKitMemory {
     /// > thus you cannot assume that its contents are zero bytes.**
     function copyPastAllocatedMemory(bytes memory input_) internal pure {
         Pointer outputPointer_;
+        // This assembly is NOT memory safe, by design.
         assembly {
             outputPointer_ := mload(0x40)
         }
