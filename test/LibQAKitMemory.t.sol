@@ -37,9 +37,6 @@ contract QAKitMemoryTest is Test {
         Pointer a_ = LibQAKitMemory.allocatedMemoryPointer();
         new uint256[](length_);
         Pointer b_ = LibQAKitMemory.allocatedMemoryPointer();
-        assertEq(
-            uint256(length_) * 0x20 + 0x20,
-            Pointer.unwrap(b_) - Pointer.unwrap(a_)
-        );
+        assertEq(uint256(length_) * 0x20 + 0x20, Pointer.unwrap(b_) - Pointer.unwrap(a_));
     }
 }
