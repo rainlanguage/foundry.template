@@ -1,19 +1,21 @@
 // SPDX-License-Identifier: CAL
-pragma solidity ^0.8.15;
+pragma solidity ^0.8.16;
 
-import "forge-std/Test.sol";
-import "sol.lib.bytes/LibBytes.sol";
+import "sol.lib.memory/LibMemory.sol";
 
-contract QAKitMemoryTest is Test {
-    using LibBytes for bytes;
+library LibQAKitMemory {
+    using LibMemory for bytes;
 
-    function assertMemoryAlignment() internal {
-        // Check alignment of memory after allocation.
-        uint256 memPtr_;
+    function memoryIsAligned() internal pure returns (bool isAligned_) {
         assembly ("memory-safe") {
-            memPtr_ := mload(0x40)
+            isAligned_ := iszero(mod(mload(0x40), 0x20))
         }
-        assertEq(memPtr_ % 0x20, 0);
+    }
+
+    function allocatedMemoryPointer() internal pure returns (Pointer pointer_) {
+        assembly ("memory-safe") {
+            pointer_ := mload(0x40)
+        }
     }
 
     /// https://docs.soliditylang.org/en/v0.8.17/assembly.html#memory-management
@@ -24,10 +26,10 @@ contract QAKitMemoryTest is Test {
     /// > **There is no guarantee that the memory has not been used before and
     /// > thus you cannot assume that its contents are zero bytes.**
     function copyPastAllocatedMemory(bytes memory input_) internal pure {
-        Cursor outputCursor_;
+        Pointer outputPointer_;
         assembly {
-            outputCursor_ := mload(0x40)
+            outputPointer_ := mload(0x40)
         }
-        LibBytes.unsafeCopyBytesTo(input_.cursor(), outputCursor_, input_.length);
+        LibMemory.unsafeCopyBytesTo(input_.dataPointer(), outputPointer_, input_.length);
     }
 }
