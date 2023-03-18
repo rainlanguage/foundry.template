@@ -1,3 +1,0 @@
-QAKitMemoryTest:testAllocatedMemoryPointer(uint8) (runs: 1024, μ: 4313, ~: 4120)
-QAKitMemoryTest:testCopyPastAllocatedMemory(bytes) (runs: 1024, μ: 12177, ~: 9351)
-QAKitMemoryTest:testMemoryIsAlignedFuzz(bytes,uint256) (runs: 1024, μ: 3711, ~: 3708)
