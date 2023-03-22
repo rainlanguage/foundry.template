@@ -15,5 +15,3 @@ jobs:
         uses: actions/setup-node@v3
 
       - uses: crytic/slither-action@v0.3.0
-        with:
-          slither-args: "--filter-paths=\"lib\" --exclude-dependencies"
