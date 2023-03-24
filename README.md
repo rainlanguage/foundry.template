@@ -1,14 +1,8 @@
 # qakit.foundry
 Cross cutting QA concerns for foundry based solidity development
 
-## Install
+## Use as template
 
 ```
-forge install rainprotocol/qakit.foundry foundry-rs/forge-std
+forge init -t rainprotocol/qakit.foundry <projectname>
 ```
-
-Run `sync.sh`
-
-## Update
-
-`forge update lib/qakit.foundry`
