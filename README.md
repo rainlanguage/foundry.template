@@ -6,4 +6,6 @@ Docs at https://rainprotocol.github.io/foundry.template
 
 ```
 forge init -t rainprotocol/foundry.template <projectname>
+cd <projectname>
+forge install foundry-rs/forge-std
 ```
