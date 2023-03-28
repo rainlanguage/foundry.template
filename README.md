@@ -1,8 +1,9 @@
-# qakit.foundry
-Cross cutting QA concerns for foundry based solidity development
+# foundry.template
+
+Docs at https://rainprotocol.github.io/foundry.template
 
 ## Use as template
 
 ```
-forge init -t rainprotocol/qakit.foundry <projectname>
+forge init -t rainprotocol/foundry.template <projectname>
 ```
