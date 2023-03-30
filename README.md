@@ -9,3 +9,5 @@ forge init -t rainprotocol/foundry.template <projectname>
 cd <projectname>
 forge install foundry-rs/forge-std
 ```
+
+Then update the readme, set the docs url and configure github pages on github repo settings.
