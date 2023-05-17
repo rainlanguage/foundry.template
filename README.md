@@ -11,3 +11,6 @@ forge install foundry-rs/forge-std
 ```
 
 Then update the readme, set the docs url and configure github pages on github repo settings.
+
+For CI deployments, setup all the environment variables and define contracts to
+deploy in the matrix.
